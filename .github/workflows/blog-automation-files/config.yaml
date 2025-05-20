@@ -1,0 +1,84 @@
+# Autonomous Blogging System Configuration
+
+# Blog Identity
+blog:
+  title: "Autonomous Blog"
+  description: "A fully automated blog created with Manus-AI"
+  author: "Manus-AI"
+  language: "en"
+  timezone: "UTC"
+
+# Jekyll Configuration
+jekyll:
+  theme: "minima"
+  permalink: "/:year/:month/:day/:title/"
+  plugins:
+    - jekyll-feed
+    - jekyll-seo-tag
+
+# GitHub Pages Configuration
+github_pages:
+  repository: ""  # To be filled by user
+  branch: "gh-pages"
+  cname: ""  # Optional custom domain
+
+# API Keys and Credentials (to be filled by the automation system)
+api_keys:
+  serp: ""
+  unsplash: ""
+  pexels: ""
+  language_tool: ""
+  amazon_affiliate: ""
+
+# Pipeline Configuration
+keyword_discovery:
+  cache_dir: "cache/keywords"
+  max_results: 10
+  difficulty_threshold: 70  # 0-100, higher means easier
+
+content_creation:
+  min_word_count: 1200
+  max_word_count: 1500
+  tone: "informative"
+  include_faq: true
+  include_toc: true
+
+grammar_check:
+  min_readability_score: 70
+  check_plagiarism: true
+  style_guide: "blog"
+
+visual_generator:
+  featured_image_count: 1
+  inline_image_count: 2
+  image_style: "professional"
+  preferred_source: "generation"  # "generation" or "stock"
+
+publisher:
+  auto_publish: false  # Require manual approval before publishing
+  schedule_posts: false
+  default_category: "General"
+  default_tags: ["automated", "blog"]
+
+monetization:
+  insert_affiliate_links: true
+  max_affiliate_links: 3
+  ad_placement: "sidebar"  # "sidebar", "inline", "both", or "none"
+
+social_promotion:
+  platforms:
+    - twitter
+    - linkedin
+    - pinterest
+  schedule_interval: 24  # Hours between posts
+  hashtags: ["blog", "automation"]
+
+email_drafter:
+  platform: "beehiiv"  # "beehiiv", "convertkit", or "buttondown"
+  template: "standard"
+  include_preview: true
+
+analytics:
+  platform: "ga4"  # "ga4" or "ezoic"
+  track_events: true
+  weekly_report: true
